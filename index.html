@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/header.js"></script>
+    <title>屈耘野 - Qu Yunye</title>
+    <meta name="keywords" content="屈耘野,耘野,quyunye,Yunye Qu,vbvbv.com,svip.tech" />
+    <meta name="description" content="屈耘野 - Qu Yunye" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        // 选择所有具有锚点链接的元素
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
+        // 添加点击事件监听器
+        anchorLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // 阻止默认的点击事件
+                const targetId = this.getAttribute('href'); // 获取目标锚点的id
+
+                // 使用平滑滚动到达目标锚点
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+    <!-- pace Loading-Tool-->
+    <script src="js/pace.min.js"></script>
+    <link rel="stylesheet" href="css/pace_blue_bar.css">
+    <script src="js/upper_bound_control.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGCHEXCHC6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NGCHEXCHC6');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8404742748741464"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="change" id="index_card" style="text-align: center;">
+        <center>
+            <img class="change" id="favorite" style="width:160px;margin-top:-50px;" src="images/favorite.jpg"><br>
+            <b id="name" style="font-weight: 300;font-size:200%;">屈耘野 Qu, Yunye</b><br>
+            <b><span style="font-weight: 300;" class="text-muted text-xs block">
+                    <div id="introduction"></div>
+        </center>
+        <center>
+            <div class="buttons" style="text-align: center;">
+                <a href="#about" target="_self">
+                    <button class="button_1">
+                        <b style="font-size:15px;font-weight: 300;">简单介绍</b><br>About
+                    </button>
+                </a>
+                <a href="#education" target="_self">
+                    <button class="button_1">
+                        <b style="font-size:15px;font-weight: 300;">教育经历</b><br>Education
+                    </button>
+                </a>
+                <a href="#tech" target="_self">
+                    <button class="button_1">
+                        <b style="font-size:15px;font-weight: 300;">知识与技能</b><br>Tech & Skill
+                    </button>
+                </a>
+                <a href="projects.html#projects" target="_blank">
+                    <button class="button_1">
+                        <b style="font-size:15px;font-weight: 300;">项目与经验</b><br>Projects
+                    </button>
+                </a>
+                <a href="life.html#life" target="_blank">
+                    <button class="button_1">
+                        <b style="font-size:15px;font-weight: 300;">生活</b><br>My Life
+                    </button>
+                </a>
+                <a href="#contact" target="_self">
+                    <button class="button_1">
+                        <b style="font-size:15px;font-weight: 300;">链接与联系</b><br>Links
+                    </button>
+                </a>
+            </div>
+
+            <p class="change" id="icons">
+                <a href="#about" target="_self"><i style="color:#120995;" class="iconfont icon-mubiao"></i></a>&nbsp;
+                <a href="#education" target="_self"><i style="color:#851ea7;"
+                        class="iconfont icon-xuexiao"></i></a>&nbsp;
+                <a href="#tech" target="_self"><i style="color:#950915;" class="iconfont icon-jiegou"></i></a>&nbsp;
+                <a href="projects.html#projects" target="_blank"><i style="color:#a7431e;"
+                        class="iconfont icon-ziyuan"></i></a>&nbsp;
+                <a href="life.html#life" target="_blank"><i style="color:#b37004;"
+                        class="iconfont icon-xingqiu"></i></a>&nbsp;
+                <a href="#contact" target="_self"><i style="color:#7f881a;" class="iconfont icon-haoyou"></i></a>&nbsp;
+                <a href="#"
+                    onclick="document.getElementById('overlay').style.display = 'flex';document.getElementById('dialog-img').src = 'images/wechat.jpg';return false;"
+                    target="_self"><i style="color:#467f0c;" class="iconfont icon-weixin"></i></a>&nbsp;
+            </p>
+            <br>
+
+        </center>
+    </div>
+
+
+    <div class="overlay" id="overlay" style="display:none;"
+        onclick="if(event.target === this || event.target.classList.contains('close-button')) { this.style.display = 'none'; }">
+        <div class="dialog-box">
+            <span class="close-button">&times; 关闭</span>
+            <img id="dialog-img" style="margin: 0 auto;max-width: 300px;" src="images/wechat.jpg" alt="联系方式">
+        </div>
+    </div>
+
+    <div id="about" class="change card">
+        <a style="padding:2%;" href="#"><img class="change" id="favorite"
+                style="float:left;width:80px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
+        <div style="padding:1%;float:left;"><b style="font-size:150%;"
+                onclick="window.location.href='#'">简单介绍<br></b>About</div>
+        <br><br>
+        <div style="padding:3%;">
+            <b style="font-size:15px;font-weight: 350;">
+                <p><i class="iconfont icon-geren"></i> 出生于中国浙江, 1999/05, INTJ / ENTJ</p>
+                <p>
+                    <i class="iconfont icon-yanfa"></i> 写代码是终生的热爱, 涵盖前后端、AI智能与网络安全
+                </p>
+                <p><i class="iconfont icon-xingqiu"></i> 兴趣: 旅行 / 素描 / 西画 / 心理学</p>
+
+                <p><i class="iconfont icon-xuexiao"></i> 毕业于: 帝国理工学院, 伦敦, 英国</p>
+
+                <p><i class="iconfont icon-dingwei"></i> 常见坐标: GTA5洛圣都热心市民 & OW漓江塔常驻居民</p>
+            </b>
+        </div>
+    </div>
+
+    <div id="education" class="change card">
+        <a style="padding:2%;" href="#"><img class="change" id="favorite"
+                style="float:left;width:80px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
+        <div style="padding:1%;float:left;"><b style="font-size:150%;"
+                onclick="window.location.href='#'">教育经历<br></b>Education</div>
+
+        <br><br>
+        <div style="padding:3%;">
+        </div>
+
+        <a>
+            <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <img class="p_card_p" src="images/imperial.jpg">
+                <div class="p_card_p_2" style="background-image: url(images/imperial.jpg);"></div>
+                <p class="p_all_text" style="padding-top: 10px;">
+                    <b class="p_card_t"><img style="height:22px;float:left;" src="images/imperial-logo.png">帝国理工学院</b>
+                    <br>
+                    <a class="p_card_text" style="font-size:17px;color:#333;">理学硕士 计算科学与工程</a>
+                    <b class="p_card_text" style="font-size:15px;color:#333;">2021.07 - 2022.12<br><br>
+                        在帝国理工的世界一流研究人员指导下，我利用高性能计算资源，解决科学与工程领域的前沿挑战，并完成独立研究项目。<br>该硕士的核心是人工智能、数学、物理和计算机科学的结合，培养解决大规模现实问题的未来计算科学与工程专家。
+                    </b>
+                </p>
+
+            </div>
+        </a>
+
+        <a>
+            <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <img class="p_card_p" src="images/ouc.jpg">
+                <div class="p_card_p_2" style="background-image: url(images/ouc.jpg);"></div>
+                <p class="p_all_text" style="padding-top: 10px;">
+                    <a class="p_card_t"><img style="height:22px;float:left;" src="images/ouc-logo.png">中国海洋大学</a>
+                    <br>
+                    <a class="p_card_text" style="font-size:17px;color:#333;">工程学士 计算机科学与技术</a>
+                    <b class="p_card_text" style="font-size:15px;color:#333;">2017.08 - 2021.07<br><br>
+                        我在核心专业课程中取得优异成绩，如数据结构 (98分)、Python (98分)、数据库系统 (97分)、信息可视化 (97分)、大学数学 (97分)以及C++课程设计
+                        (95分)。<br>我也修读了经济、管理与商业的相当一部分课程, 并多次获得学习优秀奖学金。
+                    </b>
+                </p>
+            </div>
+        </a>
+        <br>
+    </div>
+
+    <div id="tech" class="change card">
+        <a style="padding:2%;" href="#"><img class="change" id="favorite"
+                style="float:left;width:80px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
+        <div style="padding:1%;float:left;"><b style="font-size:150%;"
+                onclick="window.location.href='#'">知识与技能<br></b>Tech & Skill</div>
+
+        <br><br><br>
+
+
+        <a>
+            <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+
+                <left>
+                    <p class="p_all_text" style="padding-top: 10px;">
+                        <left><b class="p_card_t">CS & 前后端开发</b><br>
+                        </left>
+
+                        <b class="p_card_tag blue1">
+                            &nbsp;Spring Boot&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;C & C++&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;数据结构与算法&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;操作系统&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;计算机网络&nbsp;</b><b class="p_card_tag blue1">
+                            &nbsp;编译原理&nbsp;</b> <b class="p_card_tag blue1">
+                            &nbsp;MyBatis & Sql&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;Vue.js&nbsp;</b>
+                        <b class="p_card_tag blue2">
+                            &nbsp;C# & .Net&nbsp;</b>
+                        <b class="p_card_tag blue2">
+                            &nbsp;并行计算&nbsp;</b>
+                        <b class="p_card_tag blue2">
+                            &nbsp;Php&nbsp;</b>
+                        <b class="p_card_tag blue2">
+                            &nbsp;React.js&nbsp;</b>
+                    </p>
+                </left>
+            </div>
+        </a>
+
+        <a>
+            <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <left>
+                    <p class="p_all_text" style="padding-top: 10px;">
+                        <left><b class="p_card_t">人工智能 & 数据科学</b><br>
+                        </left>
+                        <b class="p_card_tag blue1">
+                            &nbsp;神经网络&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;PyTorch&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;TensorFlow&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;SVM&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;DT & RF&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;数据可视化&nbsp;</b>
+                        <b class="p_card_tag blue2">
+                            &nbsp;纳维-斯托克斯方程&nbsp;</b>
+                        <b class="p_card_tag blue2">
+                            &nbsp;优化与反转&nbsp;</b>
+                        <b class="p_card_tag blue2">
+                            &nbsp;微分方程的数值解&nbsp;</b>
+                    </p>
+                </left>
+            </div>
+        </a>
+
+        <a>
+            <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <left>
+                    <p class="p_all_text" style="padding-top: 10px;">
+                        <left><b class="p_card_t">信息安全 & 网络攻防</b><br>
+                        </left>
+                        <b class="p_card_tag blue1">
+                            &nbsp;渗透测试&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;入侵检测&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;加密算法&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;数字取证&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;纵深防御&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;代码注入&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;漏洞利用&nbsp;</b>
+                        <b class="p_card_tag blue2">
+                            &nbsp;溢出攻击&nbsp;</b>
+                        <b class="p_card_tag blue2">
+                            &nbsp;DDOS&nbsp;</b>
+                    </p>
+                </left>
+            </div>
+        </a>
+        <div style="text-align: center;">
+            <div class="notes_card">
+                <a>
+                    <div class="card-img" style="background-image: url(images/paint.jpg);"></div>
+                    <div class="card-u">
+                        <b class="p_card_tag blue1">
+                            &nbsp;西画&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;素描&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;水彩&nbsp;</b>
+                    </div>
+                </a>
+            </div>
+            <div class="notes_card">
+                <a>
+                    <div class="card-img" style="background-image: url(images/psy.jpg);"></div>
+                    <div class="card-u">
+                        <b class="p_card_tag blue1">
+                            &nbsp;心理学&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;精神分析&nbsp;</b>
+                        <b class="p_card_tag blue1">
+                            &nbsp;虚构再现&nbsp;</b>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="more" class="change card">
+        <a style="padding:2%;" href="#"><img class="change" id="favorite"
+                style="float:left;width:80px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
+        <div style="padding:1%;float:left;"><b style="font-size:150%;"
+                onclick="window.location.href='#'">更多信息<br></b>More</div>
+        <br><br>
+        <div style="padding:3%;">
+            <b style="font-size:15px;font-weight: 400;">
+                <p><a href="projects.html#projects" target="_blank"><i style="color:#a7431e;"
+                            class="iconfont icon-ziyuan"></i></a><a href="projects.html#projects" target="_blank"
+                        style="color: black;">点击这里 查看我的项目与经验</a>
+                </p>
+                <p>
+                    <a href="life.html#life" target="_blank"><i style="color:#b37004;"
+                            class="iconfont icon-xingqiu"></i></a><a href="life.html#life" target="_blank"
+                        style="color: black;">点击这里 查看我的生活</a>
+                </p>
+            </b>
+        </div>
+    </div>
+
+    <div id="contact" class="change card">
+        <a style="padding:2%;" href="#"><img class="change" id="favorite"
+                style="float:left;width:80px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
+        <div style="padding:1%;float:left;"><b style="font-size:150%;" onclick="window.location.href='#'">链接 &
+                联系<br></b>Links & Contact</div>
+        <br><br>
+        <div style="padding:3%;">
+            <b style="font-size:15px;font-weight: 400;">
+                <p><i class="iconfont icon-youjian"></i> Email: <a href="Mailto:i@quyunye.com"
+                        style="color:black;font-weight: 500;"> i@quyunye.com</a></p>
+                <p>
+                    <a href="#" style="color:black;"
+                        onclick="document.getElementById('overlay').style.display = 'flex';document.getElementById('dialog-img').src = 'images/wechat.jpg';return false;"
+                        target="_self"><i class="iconfont icon-weixin"></i> 微信: 点击显示</a>&nbsp;
+                    <a href="#" style="color:black;"
+                        onclick="document.getElementById('overlay').style.display = 'flex';document.getElementById('dialog-img').src = 'images/qq.jpg';return false;"
+                        target="_self"><i class="iconfont icon-qq"></i> QQ: 点击显示</a>
+                </p>
+                <p><i class="iconfont icon-tuite"></i><a href="https://twitter.com/verrillchu" target="_blank"
+                        style="color:black;"> 推特: Twitter.com/VerrillChu</a></p>
+
+                <p><i class="iconfont icon-github"></i> <a href="https://github.com/quyunye" target="_blank"
+                        style="color:black;">GitHub.com/QuYunye</a></p>
+
+                <p><i class="iconfont icon-xiangji"></i><a href="https://www.svip.tech/" target="_blank"
+                        style="color:black;"> 博客(好久没更新了): www.svip.tech</a></p>
+                <p><i class="iconfont icon-biji"></i> 旧版主页: <a href="https://quyunye.com/2016" target="_blank"
+                        style="color:black;">2016 </a><a href="https://quyunye.com/2019.html" target="_blank"
+                        style="color:black;">2019 </a></p>
+            </b>
+        </div>
+    </div>
+
+    <div class="fixed-buttons">
+        <!-- Scroll to top button -->
+        <button onclick="scrollToTop()"><i class="iconfont icon-dingbu"></i></button>
+        <!-- Fullscreen toggle button -->
+        <button onclick="toggleFullscreen()"><i class="iconfont icon-quanping"></i></button>
+    </div>
+
+
+    <script>
+        const indexCard = document.getElementById('index_card');
+        const cards = document.querySelectorAll('.card');
+        const button1Elements = document.getElementsByClassName('button_1');
+        function index_big() {
+            first = false;
+            indexCard.classList.remove('small_effect');
+            for (let i = 0; i < button1Elements.length; i++) {
+                button1Elements[i].classList.remove('small_effect');
+            }
+        };
+        function index_small() {
+            first = false;
+            indexCard.classList.add('small_effect');
+            for (let i = 0; i < button1Elements.length; i++) {
+                button1Elements[i].classList.remove('hover_effect');
+                button1Elements[i].classList.add('small_effect');
+                first = false;
+            }
+        };
+        document.addEventListener('click', function (event) {
+            var isCardElement = Array.from(cards).some(card => card.contains(event.target));
+            if ((!indexCard.contains(event.target)) && (!isCardElement)) {
+                index_small();
+            };
+            if (indexCard.contains(event.target)) {
+                index_big();
+            };
+        });
+    </script>
+
+    <footer id="footer">
+        <!-----------  footer----------->
+        <center>
+            <script type="text/javascript" src="js/footer.js"></script>
+        </center>
+    </footer>
+
+    <script type='text/javascript' src='https://www.vbvbv.com/analytics/api.js'></script>
+
+</body>
+
+</html>

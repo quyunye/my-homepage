@@ -1,0 +1,44 @@
+/* 鼠标指针图标bynote.cn */
+body {
+    cursor: url(a11.cur), auto;
+}
+
+#rightside>div>button,
+#rightside>div>a {
+    display: block;
+    margin-bottom: 2px;
+    width: 30px;
+    height: 30px;
+    color: var(--btn-color);
+    text-align: center;
+    font-size: 16px;
+    cursor: url(a22.cur), auto;
+}
+
+/*a标签*/
+a:hover,
+/*按钮*/
+button:hover,
+/* 文章标签 */
+.layout_post .tag_share .post-meta__tags,
+/* 评论区 */
+.vcol * ,
+.v[data-class=v] .vicon,
+.v[data-class=v] .vbtn,
+/* 回复 */
+.vat,
+/*i标签*/
+i:hover,
+/*up酱*/
+#upj:hover,
+/*分页器*/
+#pagination .page-number:hover 
+{
+    cursor: url(a22.cur), auto;
+}
+
+
+/* 分页器的三个点(...) */
+.space {
+    color: #00c4b6;
+}
