@@ -8,7 +8,7 @@ document.write('</p>');
 // ----------- introduction 开始 -----------
 var first = true;
 var introduction = function (documentElement) {
-    var sentence = ["临邛道士鸿都客,能以精诚致魂魄", "天长地久有时尽，此恨绵绵无绝期", "风吹仙袂飘飖举，犹似霓裳羽衣舞"];
+    var sentence = ["临邛道士鸿都客,能以精诚致魂魄", "天长地久有时尽，此恨绵绵无绝期", "豫兮若冬涉川,旷兮其若谷"];
     var msForwardDelay = 80;
     var msBackwardDelay = 2;
     var msWaitTime = 1000;
