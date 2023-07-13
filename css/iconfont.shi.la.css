@@ -1,9 +1,9 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4116886 */
-  src: url('iconfont.woff2?t=1689219743561') format('woff2'),
-       url('iconfont.woff?t=1689219743561') format('woff'),
-       url('iconfont.ttf?t=1689219743561') format('truetype'),
-       url('iconfont.svg?t=1689219743561#iconfont') format('svg');
+  src: url('https://quyunye.com/css/iconfont.woff2?t=1689219743561') format('woff2'),
+       url('https://quyunye.com/css/iconfont.woff?t=1689219743561') format('woff'),
+       url('https://quyunye.com/css/iconfont.ttf?t=1689219743561') format('truetype'),
+       url('https://quyunye.com/css/iconfont.svg?t=1689219743561#iconfont') format('svg');
 }
 
 .iconfont {

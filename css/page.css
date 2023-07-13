@@ -225,6 +225,11 @@ progress {
   margin-top: -20px;
 }
 
+.p_card_content {
+  margin-top: 1%;
+  margin-left: 3%;
+}
+
 .project_card {
   overflow: hidden;
   overflow: scroll;
