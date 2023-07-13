@@ -1,8 +1,8 @@
-document.write('<!----------- 公共js footer开始 ----------->');
+document.write('<!----------- 公共 footer开始 ----------->\n');
 document.write('<br><br>');
-document.write('<p style="color:#333;" style="text-align: center;">');
+document.write('<p style="text-align: center;">');
 document.write('QuYunye.com 屈耘野 © 2013 - 2023');
-document.write('</p>');
+document.write('</p><br>');
 
 
 // ----------- introduction 开始 -----------
@@ -92,6 +92,20 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Function to toggle dark mode
+function toggleDarkMode() {
+    let body = document.body;
+    //这里button:nth-child需要对按钮的顺序进行正确定义
+    var darkModeIcon = document.querySelector('.fixed-buttons button:nth-child(1) i');
+    if (body.classList.contains("dark-mode")) {
+        body.classList.remove("dark-mode");
+        darkModeIcon.className = 'iconfont icon-yewan';
+    } else {
+        body.classList.add("dark-mode");
+        darkModeIcon.className = 'iconfont icon-taiyang';
+    }
+}
+
 // Function to toggle fullscreen mode
 function toggleFullscreen() {
     if (document.fullscreenElement) {
@@ -130,13 +144,13 @@ function exitFullscreen() {
 
 // Function to update the fullscreen button icon based on the current state
 function updateFullscreenButton() {
-    var fullscreenIcon = document.querySelector('.fixed-buttons button:nth-child(2) i');
+    var fullscreenIcon = document.querySelector('.fixed-buttons button:nth-child(3) i');
     if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
         fullscreenIcon.className = 'iconfont icon-suoxiao';
     } else {
-        fullscreenIcon.className = 'iconfont icon-quanping';
+        fullscreenIcon.className = 'iconfont icon-fangda';
     }
 }
 // ----------- button 结束 -----------
 
-document.write('<!----------- 公共js footer结束 ----------->');
+document.write('<!----------- 公共 footer结束 ----------->\n');
