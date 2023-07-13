@@ -17,27 +17,9 @@
             scroll-behavior: smooth;
         }
     </style>
-    <script>
-        // 选择所有具有锚点链接的元素
-        const anchorLinks = document.querySelectorAll('a[href^="#"]');
-        // 添加点击事件监听器
-        anchorLinks.forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault(); // 阻止默认的点击事件
-                const targetId = this.getAttribute('href'); // 获取目标锚点的id
-
-                // 使用平滑滚动到达目标锚点
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            });
-        });
-    </script>
     <!-- pace Loading-Tool-->
     <script src="js/pace.min.js"></script>
     <link rel="stylesheet" href="css/pace_blue_bar.css">
-    <script src="js/upper_bound_control.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGCHEXCHC6"></script>
     <script>
@@ -58,6 +40,12 @@
             <b id="name" style="font-weight: 300;font-size:200%;">屈耘野 Qu, Yunye</b><br>
             <b><span style="font-weight: 300;" class="text-muted text-xs block">
                     <div id="introduction"></div>
+                    <script>
+                        window.addEventListener('DOMContentLoaded', (event) => {
+                            var sentence = ["临邛道士鸿都客,能以精诚致魂魄", "天长地久有时尽,此恨绵绵无绝期", "豫兮若冬涉川,涣兮若冰之将释"];
+                            introduction(document.getElementById('introduction'), sentence);
+                        });
+                    </script>
         </center>
         <center>
             <div class="buttons" style="text-align: center;">
@@ -124,12 +112,13 @@
     </div>
 
     <div id="life" class="change card">
-        <a style="padding:2%;" href="#"><img class="change" id="favorite"
+        <a href="#"><img class="change" id="favorite"
                 style="float:left;height:72px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
-        <div style="padding:1%;float:left;"><b style="font-size:150%;" onclick="window.location.href='#'">我的旅程<br></b>My
-            Journey</div>
-        <br><br>
-        <div style="padding:3%;">
+        <div style="padding-left:1%;padding-top:1%;float:left;">
+            <b style="font-size:150%;" onclick="window.location.href='#'">我的旅程<br></b>My Journey<br><br>
+        </div>
+
+        <div style="clear:both;padding-left:3%;padding-right:3%;padding-bottom:3%;">
             <b style="font-size:15px;font-weight: 350;">
                 <p>旅行是我的热爱，让我能够探索世界的多彩之处。我有幸踏足的这些地方、这些经历让我视野开阔，丰富了我的人生。</p>
                 <!-- height应当大于js/chinaMapConfig.js中height: 475-->
@@ -142,48 +131,48 @@
     </div>
 
     <div id="game" class="change card">
-        <a style="padding:2%;" href="#"><img class="change" id="favorite"
+        <a href="#"><img class="change" id="favorite"
                 style="float:left;height:72px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
-        <div style="padding:1%;float:left;"><b style="font-size:150%;" onclick="window.location.href='#'">游戏<br></b>Game
+        <div style="padding-left:1%;padding-top:1%;float:left;">
+            <b style="font-size:150%;" onclick="window.location.href='#'">游戏<br></b>Game<br><br>
         </div>
 
-        <br><br>
-        <div style="padding:3%;">
+        <div style="clear:both;">
+            <a>
+                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                    <img class="p_card_p" src="images/ow.jpg">
+                    <div class="p_card_p_2" style="background-image: url(images/ow.jpg);"></div>
+                    <p class="p_all_text" style="padding-top: 10px;">
+                        <b class="p_card_t">守望先锋</b>
+                        <br>
+                        <b class="p_card_text" style="font-size:17px;">Overwatch 开服玩家<br>从OW1到OW2
+                        </b>
+                    </p>
+
+                </div>
+            </a>
+
+            <a>
+                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                    <img class="p_card_p" src="images/gta5.jpg">
+                    <div class="p_card_p_2" style="background-image: url(images/gta5.jpg);"></div>
+                    <p class="p_all_text" style="padding-top: 10px;">
+                        <a class="p_card_t">GTA5</a>
+                        <br>
+                        <b class="p_card_text" style="font-size:17px;">GTA V <br> GTA Online
+                        </b>
+                    </p>
+                </div>
+            </a>
+            <br>
+            <a>
+                <div style="float: right;padding:3%;"><i class="iconfont icon-shouye"></i><a href="index.html"
+                        target="_blank" class="unified-link">返回首页</a>
+                </div>
+            </a>
         </div>
-
-        <a>
-            <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                <img class="p_card_p" src="images/ow.jpg">
-                <div class="p_card_p_2" style="background-image: url(images/ow.jpg);"></div>
-                <p class="p_all_text" style="padding-top: 10px;">
-                    <b class="p_card_t">守望先锋</b>
-                    <br>
-                    <b class="p_card_text" style="font-size:17px;">Overwatch 开服玩家<br>从OW1到OW2
-                    </b>
-                </p>
-
-            </div>
-        </a>
-
-        <a>
-            <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                <img class="p_card_p" src="images/gta5.jpg">
-                <div class="p_card_p_2" style="background-image: url(images/gta5.jpg);"></div>
-                <p class="p_all_text" style="padding-top: 10px;">
-                    <a class="p_card_t">GTA5</a>
-                    <br>
-                    <b class="p_card_text" style="font-size:17px;">GTA V <br> GTA Online
-                    </b>
-                </p>
-            </div>
-        </a>
-        <br>
-        <a>
-            <div style="float: right;padding:3%;"><i class="iconfont icon-shouye"></i><a href="index.html"
-                    target="_blank" class="unified-link">返回首页</a>
-            </div>
-        </a>
     </div>
+    <br>
 
     <div class="fixed-buttons">
         <!-- Dark mode toggle button -->
@@ -194,40 +183,13 @@
         <!-- <button onclick="toggleFullscreen()"><i class="iconfont icon-fangda"></i></button> -->
     </div>
 
-
-    <script>
-        const indexCard = document.getElementById('index_card');
-        const cards = document.querySelectorAll('.card');
-        const button1Elements = document.getElementsByClassName('button_1');
-        function index_big() {
-            first = false;
-            indexCard.classList.remove('small_effect');
-            for (let i = 0; i < button1Elements.length; i++) {
-                button1Elements[i].classList.remove('small_effect');
-            }
-        };
-        function index_small() {
-            first = false;
-            indexCard.classList.add('small_effect');
-            for (let i = 0; i < button1Elements.length; i++) {
-                button1Elements[i].classList.remove('hover_effect');
-                button1Elements[i].classList.add('small_effect');
-                first = false;
-            }
-        };
-        document.addEventListener('click', function (event) {
-            var isCardElement = Array.from(cards).some(card => card.contains(event.target));
-            if ((!indexCard.contains(event.target)) && (!isCardElement)) {
-                index_small();
-            };
-            if (indexCard.contains(event.target)) {
-                index_big();
-            };
-        });
-    </script>
-
+    <!-----------  footer----------->
     <footer id="footer">
-        <!-----------  footer----------->
+        <p style="text-align: center;">
+            <a class="unified-link" href="http://wo.shi.la" target="_blank">Wo.Shi.La</a> - 我是啦<br>
+            <a class="unified-link" href="https://quyunye.com" target="_blank">QuYunye.com</a> - 屈耘野 © 2013 - 2023 
+        </p>
+        <br>
         <center>
             <script type="text/javascript" src="js/footer.js"></script>
         </center>

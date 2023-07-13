@@ -1,8 +1,8 @@
 document.write('<!-----------  公共js和css 开始----------->\n');
 document.write(
-    '<link rel="stylesheet" href="css/mouse.css">\n' +
-    '<link rel="stylesheet" href="css/iconfont.css" type="text/css">\n' +
-    '<link rel="stylesheet" href="css/page.css">\n');
+    '<link rel="stylesheet" href="https://quyunye.com/css/mouse.css">\n' +
+    '<link rel="stylesheet" href="https://quyunye.com/css/iconfont.cors.css" type="text/css">\n' +
+    '<link rel="stylesheet" href="https://quyunye.com/css/page.css">\n');
 
 //控制pace.js进度条加载时间上限，自动隐藏
 function hidepacejs() {
