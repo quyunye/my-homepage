@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <div class="change" id="index_card" style="text-align: center;">
+    <div class="change" id="index_card">
         <center>
             <img class="change" id="favorite" style="width:160px;margin-top:-50px;" src="images/favorite.jpg"><br>
             <b id="name" style="font-weight: 300;font-size:200%;">屈耘野 Qu, Yunye</b><br>
@@ -46,6 +46,7 @@
                             introduction(document.getElementById('introduction'), sentence);
                         });
                     </script>
+                </span>
         </center>
         <center>
             <div class="buttons" style="text-align: center;">
@@ -104,17 +105,16 @@
 
 
     <div class="overlay" id="overlay" style="display:none;"
-        onclick="if(event.target === this || event.target.classList.contains('close-button')) { this.style.display = 'none'; }">
-        <div class="dialog-box">
-            <span class="close-button">&times; 关闭</span>
+        onclick="if(event.target === this || event.target.classList.contains('close_button')) { this.style.display = 'none'; }">
+        <div class="dialog_box">
+            <span class="close_button">&times; 关闭</span>
             <img id="dialog-img" style="margin: 0 auto;max-width: 300px;" src="images/wechat.jpg" alt="联系方式">
         </div>
     </div>
 
     <div id="life" class="change card">
-        <a href="#"><img class="change" id="favorite"
-                style="float:left;height:72px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
-        <div style="padding-left:1%;padding-top:1%;float:left;">
+        <a href="#"><img class="change favorite" src="images/favorite.jpg"></a>
+        <div class="class_title">
             <b style="font-size:150%;" onclick="window.location.href='#'">我的旅程<br></b>My Journey<br><br>
         </div>
 
@@ -131,18 +131,17 @@
     </div>
 
     <div id="game" class="change card">
-        <a href="#"><img class="change" id="favorite"
-                style="float:left;height:72px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
-        <div style="padding-left:1%;padding-top:1%;float:left;">
+        <a href="#"><img class="change favorite" src="images/favorite.jpg"></a>
+        <div class="class_title">
             <b style="font-size:150%;" onclick="window.location.href='#'">游戏<br></b>Game<br><br>
         </div>
 
         <div style="clear:both;">
             <a>
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <div class="project_card">
                     <img class="p_card_p" src="images/ow.jpg">
                     <div class="p_card_p_2" style="background-image: url(images/ow.jpg);"></div>
-                    <p class="p_all_text" style="padding-top: 10px;">
+                    <p class="p_all_text">
                         <b class="p_card_t">守望先锋</b>
                         <br>
                         <b class="p_card_text" style="font-size:17px;">Overwatch 开服玩家<br>从OW1到OW2
@@ -153,10 +152,10 @@
             </a>
 
             <a>
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <div class="project_card">
                     <img class="p_card_p" src="images/gta5.jpg">
                     <div class="p_card_p_2" style="background-image: url(images/gta5.jpg);"></div>
-                    <p class="p_all_text" style="padding-top: 10px;">
+                    <p class="p_all_text">
                         <a class="p_card_t">GTA5</a>
                         <br>
                         <b class="p_card_text" style="font-size:17px;">GTA V <br> GTA Online
@@ -167,14 +166,14 @@
             <br>
             <a>
                 <div style="float: right;padding:3%;"><i class="iconfont icon-shouye"></i><a href="index.html"
-                        target="_blank" class="unified-link">返回首页</a>
+                        target="_blank" class="unified_link">返回首页</a>
                 </div>
             </a>
         </div>
     </div>
     <br>
 
-    <div class="fixed-buttons">
+    <div class="fixed_buttons">
         <!-- Dark mode toggle button -->
         <button onclick="toggleDarkMode()"><i class="iconfont icon-yewan"></i></button>
         <!-- Scroll to top button -->
@@ -186,8 +185,8 @@
     <!-----------  footer----------->
     <footer id="footer">
         <p style="text-align: center;">
-            <a class="unified-link" href="http://wo.shi.la" target="_blank">Wo.Shi.La</a> - 我是啦<br>
-            <a class="unified-link" href="https://quyunye.com" target="_blank">QuYunye.com</a> - 屈耘野 © 2013 - 2023 
+            <a class="unified_link" href="http://wo.shi.la" target="_blank">Wo.Shi.La</a> - 我是啦<br>
+            <a class="unified_link" href="https://quyunye.com" target="_blank">QuYunye.com</a> - 屈耘野 © 2013 - 2023
         </p>
         <br>
         <center>

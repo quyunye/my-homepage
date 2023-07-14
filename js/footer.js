@@ -10,12 +10,12 @@ function scrollToTop() {
 function toggleDarkMode() {
     let body = document.body;
     //这里button:nth-child需要对按钮的顺序进行正确定义
-    var darkModeIcon = document.querySelector('.fixed-buttons button:nth-child(1) i');
-    if (body.classList.contains("dark-mode")) {
-        body.classList.remove("dark-mode");
+    var darkModeIcon = document.querySelector('.fixed_buttons button:nth-child(1) i');
+    if (body.classList.contains("dark_mode")) {
+        body.classList.remove("dark_mode");
         darkModeIcon.className = 'iconfont icon-yewan';
     } else {
-        body.classList.add("dark-mode");
+        body.classList.add("dark_mode");
         darkModeIcon.className = 'iconfont icon-taiyang';
     }
 }
@@ -54,7 +54,7 @@ function exitFullscreen() {
 }
 // Function to update the fullscreen button icon based on the current state
 function updateFullscreenButton() {
-    var fullscreenIcon = document.querySelector('.fixed-buttons button:nth-child(3) i');
+    var fullscreenIcon = document.querySelector('.fixed_buttons button:nth-child(3) i');
     if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
         fullscreenIcon.className = 'iconfont icon-suoxiao';
     } else {

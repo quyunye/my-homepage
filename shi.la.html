@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="https://quyunye.com/js/header.cors.js"></script>
-    <title>Shi.La 是啦</title>
-    <meta name="keywords" content="屈耘野,耘野,quyunye,Yunye Qu,shi.la,wo.shi.la,是啦,我是啦,简单介绍,教育,经历,知识,技能,项目,经验,生活,链接,联系" />
+    <title>Shi.La 是啦 </title>
+    <meta name="keywords"
+        content="Shi.La,是啦,wo.shi.la,我是啦,mei.shi.la,没事啦,ren.shi.la,认识啦,hao.shi.la,好事啦,chi.shi.la,吃屎啦,kai.shi.la,开始啦,ce.shi.la,测试啦,chang.shi.la,尝试啦" />
     <meta name="description"
-        content="屈耘野 - 个人主页 - Qu Yunye's home page. 简单介绍, 教育, 经历, 知识, 技能, 项目, 经验, 生活, 链接, 联系. About, Education, Tech, Skill, Projects, My Life, Links" />
+        content="Shi.La 是啦 这是个神奇的网址，你会发现很多有趣的内容。wo.shi.la,我是啦,mei.shi.la,没事啦,ren.shi.la,认识啦,hao.shi.la,好事啦,chi.shi.la,吃屎啦,kai.shi.la,开始啦,ce.shi.la,测试啦,chang.shi.la,尝试啦" />
     <link rel="icon" type="image/x-icon" href="https://quyunye.com/favicon.ico">
     <link rel="shortcut icon" href="https://quyunye.com/images/logo.png" type="image/x-png">
     <link rel="apple-touch-icon" sizes="76x76" href="https://quyunye.com/images/logo.png">
@@ -17,8 +18,35 @@
             scroll-behavior: smooth;
         }
 
+        body {
+            background: linear-gradient(to left, rgb(223, 196, 175), rgb(226, 178, 229)) !important;
+        }
+
+        #index_card:hover,
+        #index_card:active,
+        #index_card.hover_effect,
+        .card:hover,
+        .card:active,
+        .card.hover_effect {
+            background: rgba(245, 210, 172, 0.8) !important;
+        }
+
         .p_all_text {
             margin-bottom: 0% !important;
+        }
+
+        #index_card.small_effect {
+            margin-top: 8% !important;
+        }
+
+        @media (min-width: 800px) {
+            #tech .in_line::after {
+                content: "";
+                display: block;
+                padding-bottom: 4em;
+                /* 4个 <br> 的高度 */
+                order: 99;
+            }
         }
     </style>
     <!-- pace Loading-Tool-->
@@ -38,224 +66,333 @@
 </head>
 
 <body>
-    <div class="change" id="index_card" style="text-align: center;">
+    <div class="change" id="index_card">
         <center>
-            <img class="change" id="favorite" style="width:160px;margin-top:-50px;"
+            <img class="change" id="favorite" style="width:100px;margin-top:-50px;"
                 src="https://quyunye.com/images/favorite.jpg"><br>
             <b id="name" style="font-weight: 400;font-size:200%;">Shi.La 是啦</b><br>
-            <b><span style="font-weight: 300;" class="text-muted text-xs block">
+            <b><span style="font-weight: 350;" class="text-muted text-xs block">
                     <div id="introduction" style="display: none;"></div>
-                    Shi.La是个非常神奇的网址，你可以访问到很多有趣的内容
+                    Shi.La是个神奇的网址，你会发现很多有趣的内容
+                </span>
         </center>
         <br>
     </div>
 
     <div class="overlay" id="overlay" style="display:none;"
-        onclick="if(event.target === this || event.target.classList.contains('close-button')) { this.style.display = 'none'; }">
-        <div class="dialog-box">
-            <span class="close-button">&times; 关闭</span>
+        onclick="if(event.target === this || event.target.classList.contains('close_button')) { this.style.display = 'none'; }">
+        <div class="dialog_box">
+            <span class="close_button">&times; 关闭</span>
             <img id="dialog-img" style="margin: 0 auto;max-width: 300px;" src="https://quyunye.com/images/wechat.jpg"
                 alt="联系方式">
         </div>
     </div>
 
-    <div id="tech" class="change card" style="font-size:15px;font-weight: 350;">
-        <a href="#"><img class="change" id="favorite"
-                style="float:left;height:72px;margin-top:-15px;margin-left:-15px;"
-                src="https://quyunye.com/images/favorite.jpg"></a>
-        <div style="padding-left:1%;padding-top:1%;float:left;">
-            <b style="font-size:150%;" onclick="window.location.href='#'">域名列表<br></b>欢迎提出更多想法！页面底部有联系方式<br><br>
-        </div>
 
-        <div style="clear:both;">
-            <a href="http://wo.shi.la/" target="_blank" class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
+    <div id="about" class="change card" style="display:none;">
+        <a href="#"><img class="change favorite" src="https://quyunye.com/images/favorite.jpg"></a>
+        <div class="class_title">
+            <b id="url_title" style="font-size:150%;">Shi.La</b><br><span id="url_description">请确认跳转</span><br><br>
+        </div>
+        <div class="in_line" style="clear:both;padding-left:3%;padding-right:3%;padding-bottom:3%;">
+            <a id="to_url" href="#tech" class="unified_link" rel="nofollow noopener noreferrer">
+                <div class="project_card">
+                    <p class="p_all_text">
+                        <b class="p_card_t">立即进入</b>
+                    </p>
+                    <div class="p_card_content">
+                        <span id="sec">点击进入目标页面</span>
+                    </div>
+                </div>
+            </a>
+
+            <a class="unified_link">
+                <div onclick="cancelRedirect();" class="project_card">
+                    <p class="p_all_text">
+                        <b class="p_card_t">网址列表</b>
+                    </p>
+                    <div class="p_card_content">
+                        查看更多有趣的网址
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="tech" class="change card" style="font-size:15px;font-weight: 350;">
+        <a href="#"><img class="change favorite" src="https://quyunye.com/images/favorite.jpg"></a>
+        <div class="class_title">
+            <b style="font-size:150%;" onclick="window.location.href='#'">网址列表<br></b>欢迎提出更多想法！页面底部有联系方式<br><br>
+        </div>
+        <div class="in_line" style="clear:both;">
+            <!-- 格式必须严格遵守，p_card_t中url_check后必须有空格区分 -->
+            <a href="http://wo.shi.la/" id="https://quyunye.com" class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
                         <b class="p_card_t">Wo.Shi.La 我是啦</b>
                     </p>
                     <div class="p_card_content">
-                        跳转至博主的个人主页</div>
+                        跳转至博主的个人主页
+                    </div>
                 </div>
             </a>
 
-            <a href="https://quyunye.com/#contact" target="_blank" class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
-                        <b class="p_card_t">Ren.Shi.La 认识啦</b>
-                    </p>
-                    <div class="p_card_content">
-                        跳转至博主的联系方式</div>
-                </div>
-            </a>
-
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
-                        <b class="p_card_t">Bu.Shi.La 不是啦</b>
-                    </p>
-                    <div class="p_card_content">
-                        还没有想好怎么用</div>
-                </div>
-            </a>
-
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
-                        <b class="p_card_t">Mei.Shi.La 没事啦 / 美食啦</b>
-                    </p>
-                    <div class="p_card_content">
-                        还没有想好怎么用</div>
-                </div>
-            </a>
-
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
-                        <b class="p_card_t">Kai.Shi.La 开始啦</b>
-                    </p>
-                    <div class="p_card_content">
-                        还没有想好怎么用</div>
-                </div>
-            </a>
-
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
-                        <b class="p_card_t">Zhe.Jiu.Shi.La 这就是啦</b>
-                    </p>
-                    <div class="p_card_content">
-                        还没有想好怎么用</div>
-                </div>
-            </a>
-
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
-                        <b class="p_card_t">Chang.Shi.La 尝试啦</b>
-                    </p>
-                    <div class="p_card_content">
-                        还没有想好怎么用</div>
-                </div>
-            </a>
-
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
+            <a href="http://Chi.Shi.La" id="https://baike.baidu.com/item/%E5%B8%83%E9%87%8C%E6%96%AF%E6%89%98%E5%A4%A7%E4%BE%BF%E5%88%86%E7%B1%BB%E6%B3%95/6263260"
+                class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
                         <b class="p_card_t">Chi.Shi.La 吃屎啦</b>
                     </p>
                     <div class="p_card_content">
-                        还没有想好怎么用</div>
+                        为您跳转到大便分类法，祝您享用愉快！
+                    </div>
                 </div>
             </a>
 
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
+            <a href="http://Ren.Shi.La" id="https://quyunye.com/#contact" class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
+                        <b class="p_card_t">Ren.Shi.La 认识啦</b>
+                    </p>
+                    <div class="p_card_content">
+                        跳转至博主的联系方式
+                    </div>
+                </div>
+            </a>
+
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
+                        <b class="p_card_t">Bu.Shi.La 不是啦</b>
+                    </p>
+                    <div class="p_card_content">
+                        还没有想好怎么用
+                    </div>
+                </div>
+            </a>
+
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
+                        <b class="p_card_t">Mei.Shi.La 没事啦 / 美食啦</b>
+                    </p>
+                    <div class="p_card_content">
+                        还没有想好怎么用
+                    </div>
+                </div>
+            </a>
+
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
+                        <b class="p_card_t">Kai.Shi.La 开始啦</b>
+                    </p>
+                    <div class="p_card_content">
+                        还没有想好怎么用
+                    </div>
+                </div>
+            </a>
+
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
+                        <b class="p_card_t">Zhe.Jiu.Shi.La 这就是啦</b>
+                    </p>
+                    <div class="p_card_content">
+                        还没有想好怎么用
+                    </div>
+                </div>
+            </a>
+
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
+                        <b class="p_card_t">Chang.Shi.La 尝试啦</b>
+                    </p>
+                    <div class="p_card_content">
+                        还没有想好怎么用
+                    </div>
+                </div>
+            </a>
+
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
                         <b class="p_card_t">Ni.Shi.La 你湿啦</b>
                     </p>
                     <div class="p_card_content">
-                        还没有想好怎么用</div>
+                        还没有想好怎么用
+                    </div>
                 </div>
             </a>
 
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
                         <b class="p_card_t">Ce.Shi.La 测试啦</b>
                     </p>
                     <div class="p_card_content">
-                        还没有想好怎么用</div>
+                        还没有想好怎么用
+                    </div>
                 </div>
             </a>
 
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
                         <b class="p_card_t">Xie.Shi.La 写诗啦</b>
                     </p>
                     <div class="p_card_content">
-                        还没有想好怎么用</div>
+                        还没有想好怎么用
+                    </div>
                 </div>
             </a>
 
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
                         <b class="p_card_t">Hao.Shi.La 好事啦</b>
                     </p>
                     <div class="p_card_content">
-                        还没有想好怎么用</div>
+                        还没有想好怎么用
+                    </div>
                 </div>
             </a>
 
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
                         <b class="p_card_t">Xiao.Shi.La 小事啦</b>
                     </p>
                     <div class="p_card_content">
-                        还没有想好怎么用</div>
+                        还没有想好怎么用
+                    </div>
                 </div>
             </a>
 
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
                         <b class="p_card_t">Diu.Shi.La 丢失啦</b>
                     </p>
                     <div class="p_card_content">
-                        还没有想好怎么用</div>
+                        还没有想好怎么用
+                    </div>
                 </div>
             </a>
 
-            <a class="unified-link">
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
-                    <p class="p_all_text" style="padding-top: 10px;">
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
                         <b class="p_card_t">Zhe.Shi.La 这是啦</b>
                     </p>
                     <div class="p_card_content">
-                        还没有想好怎么用</div>
+                        还没有想好怎么用
+                    </div>
                 </div>
             </a>
+
+            <a class="unified_link">
+                <div class="project_card">
+                    <p class="p_all_text">
+                        <b class="p_card_t">Suan.Shi.La 算是啦</b>
+                    </p>
+                    <div class="p_card_content">
+                        还没有想好怎么用
+                    </div>
+                </div>
+            </a>
+            <br>
         </div>
-        <br>
     </div>
 
 
+    <script>
+        //显示跳转框、秒数和说明,进行定时跳转的函数
+        var timer;
+        function redirectWithTimer(to_url, url_title, url_description, seconds) {
+            document.getElementById("about").style.display = "block";
+            document.getElementById("url_title").innerText = url_title;
+            document.getElementById("url_description").innerText = url_description;
+            document.getElementById("to_url").href = to_url;
+            var countdown = seconds;
+            if (to_url != undefined && to_url.trim() != "" && to_url.trim() != "#") {
+                timer = setInterval(function () {
+                    countdown--;
+                    document.getElementById("sec").innerText = countdown.toString() + "秒后自动进入目标页面";
+                    if (countdown <= 0) {
+                        clearInterval(timer);
+                        document.getElementById("sec").innerText = "正在进入目标页面";
+                        window.location.href = to_url;
+                    }
+                }, 1000);
+            }
+        }
+        //取消跳转,滑动到网址列表,取消秒数显示
+        function cancelRedirect() {
+            clearInterval(timer);
+            document.getElementById('sec').textContent = '点击进入目标页面';
+            window.location.href = '#tech';
+        }
+        //检查当前url是否有匹配并进行跳转
+        function checkUrl() {
+            //遍历每个project_card
+            var projectCards = document.querySelectorAll('#tech .project_card');
+            projectCards.forEach((card) => {
+                var url_title_element = card.querySelector('.p_all_text .p_card_t');
+                var url_description_element = card.querySelector('.p_card_content');
+                // 获取url_title和url_description内容
+                if (url_title_element && url_description_element) {
+                    var url_title = url_title_element.textContent;
+                    var url_check = url_title.split(" ")[0];
+                    var url_description = url_description_element.textContent.trim();
+                    // 寻找最终要跳转到的链接
+                    var link = card.closest('a');
+                    var to_url = link ? link.id : '#';
+                    // 执行跳转函数
+                    if (window.location.href.toLowerCase().includes(url_check.toLowerCase())) {
+                        //用于测试的语句
+                        //alert(window.location.href + ' - ' + to_url + ' - ' + url_check + ' - ' + url_title + ' - ' + url_description);
+                        redirectWithTimer(to_url, url_title, url_description, 8);
+                    }
+                }
+            });
+        }
+        checkUrl();
+    </script>
+
 
     <div id="contact" class="change card">
-        <a href="#"><img class="change" id="favorite"
-                style="float:left;height:72px;margin-top:-15px;margin-left:-15px;"
-                src="https://quyunye.com/images/favorite.jpg"></a>
-        <div style="padding-left:1%;padding-top:1%;float:left;">
-            <b style="font-size:150%;" onclick="window.location.href='#'">联系我<br></b>欢迎各种交流<br><br>
+        <a href="#"><img class="change favorite" src="https://quyunye.com/images/favorite.jpg"></a>
+        <div class="class_title">
+            <b style="font-size:150%;" onclick="window.location.href='#'">链接 & 联系<br></b>欢迎联系我<br><br>
         </div>
 
         <div style="clear:both;padding-left:3%;padding-right:3%;padding-bottom:3%;">
             <b style="font-size:15px;font-weight: 400;">
                 <p>
-                    <a href="Mailto:i@quyunye.com" class="unified-link"><i class="iconfont icon-youjian"></i> 邮件:
+                    <a href="Mailto:i@quyunye.com" class="unified_link"><i class="iconfont icon-youjian"></i> 邮件:
                         Wo@Shi.La</a>&nbsp;&nbsp;
-                    <a href="https://quyunye.com/" target="_blank" class="unified-link"><i
+                    <a href="https://quyunye.com/" target="_blank" class="unified_link"><i
                             class="iconfont icon-biji"></i>主页: QuYunYe.com</a>
                 </p>
-                <p><a href="https://www.svip.tech/" target="_blank" class="unified-link"><i
+                <p><a href="https://www.svip.tech/" target="_blank" class="unified_link"><i
                             class="iconfont icon-xiangji"></i> 博客: www.svip.tech</a></p>
                 <p>
-                    <a href="#" class="unified-link"
+                    <a href="#" class="unified_link"
                         onclick="document.getElementById('overlay').style.display = 'flex';document.getElementById('dialog-img').src = 'https://quyunye.com/images/wechat.jpg';return false;"
                         target="_self"><i class="iconfont icon-weixin"></i> 微信: 点击显示</a>&nbsp;&nbsp;
-                    <a href="#" class="unified-link"
+                    <a href="#" class="unified_link"
                         onclick="document.getElementById('overlay').style.display = 'flex';document.getElementById('dialog-img').src = 'https://quyunye.com/images/qq.jpg';return false;"
                         target="_self"><i class="iconfont icon-qq"></i> QQ: 点击显示</a>
                 </p>
                 <p><i class="iconfont icon-telegram"></i><a href="https://t.me/Verrill" target="_blank"
-                        class="unified-link"> Telegram: Verrill</a></p>
+                        class="unified_link"> Telegram: Verrill</a></p>
             </b>
         </div>
     </div>
 
-    <div class="fixed-buttons">
+    <div class="fixed_buttons">
         <!-- Dark mode toggle button -->
         <button onclick="toggleDarkMode()"><i class="iconfont icon-yewan"></i></button>
         <!-- Scroll to top button -->
@@ -267,7 +404,7 @@
     <!-----------  footer----------->
     <footer id="footer">
         <p style="text-align: center;">
-            Shi.La 是啦 © 2013 - 2023
+            Shi.La 是啦 www.shi.la © 2013 - 2023
         </p>
         <br>
         <center>

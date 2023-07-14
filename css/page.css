@@ -18,34 +18,45 @@ body {
 
 #index_card {
   /* only for card in index */
+  text-align: center;
   background: rgba(250, 250, 250, 0.6);
   backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
-  margin-top: 10%;
+  margin-top: 8%;
   margin-left: 18%;
   margin-right: 18%;
   transition: 0.3s;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: fadeInLeft;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#index_card:hover,
+#index_card:active,
+#index_card.hover_effect,
+.card:hover,
+.card:active,
+.card.hover_effect {
+  background: rgba(198, 228, 248, 0.8);
+  box-shadow: 0px 0px 32px 0 rgba(0, 0, 0, 0.4);
+  transition: 1s;
 }
 
 #index_card:hover,
 #index_card:active,
 #index_card.hover_effect {
-  background: rgba(198, 228, 248, 0.8) !important;
-  backdrop-filter: blur(11px) !important;
-  box-shadow: 0px 0px 32px 0 rgba(0, 0, 0, 0.4) !important;
-  margin-top: 10% !important;
-  transition: 1s;
+  backdrop-filter: blur(11px);
+  margin-top: 8%;
 }
 
 #index_card.small_effect {
   backdrop-filter: blur(8px);
-  margin-top: 12%;
+  margin-top: 10%;
 }
 
 .button_1.small_effect {
@@ -69,57 +80,49 @@ body {
   animation-name: fadeInLeft;
 }
 
-.card:hover,
-.card:active,
-.card.hover_effect {
-  background: rgba(198, 228, 248, 0.8) !important;
-  box-shadow: 0px 0px 32px 0 rgba(0, 0, 0, 0.4) !important;
-  transition: 1s;
+/* Dark mode start */
+
+body.dark_mode {
+  background: linear-gradient(to left, rgb(6, 6, 6), rgb(50, 50, 50)) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
-/* Dark mode start*/
-
-body.dark-mode {
-  background: linear-gradient(to left, rgb(6, 6, 6), rgb(50, 50, 50));
-  color: rgb(255, 255, 255);
+body.dark_mode #index_card,
+body.dark_mode .card,
+body.dark_mode .project_card,
+body.dark_mode .notes_card {
+  background: rgba(110, 110, 110, 0.6) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
-body.dark-mode #index_card,
-body.dark-mode .card,
-body.dark-mode .project_card,
-body.dark-mode .notes_card {
-  background: rgba(110, 110, 110, 0.6);
-  color: rgb(255, 255, 255);
-}
-
-body.dark-mode #index_card:hover,
-body.dark-mode #index_card:active,
-body.dark-mode #index_card.hover_effect,
-body.dark-mode .card:hover,
-body.dark-mode .card:active,
-body.dark-mode .card.hover_effect,
-body.dark-mode .project_card:hover,
-body.dark-mode .notes_card:hover,
-body.dark-mode .fixed-buttons button {
+body.dark_mode #index_card:hover,
+body.dark_mode #index_card:active,
+body.dark_mode #index_card.hover_effect,
+body.dark_mode .card:hover,
+body.dark_mode .card:active,
+body.dark_mode .card.hover_effect,
+body.dark_mode .project_card:hover,
+body.dark_mode .notes_card:hover,
+body.dark_mode .fixed_buttons button {
   background: rgba(128, 128, 128, 0.6) !important;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
 }
 
-body.dark-mode .button_1,
-body.dark-mode .iconfont,
-body.dark-mode .p_card_text,
-body.dark-mode a.unified-link,
-body.dark-mode footer {
-  color: rgb(255, 255, 255);
+body.dark_mode .button_1,
+body.dark_mode .iconfont,
+body.dark_mode .p_card_text,
+body.dark_mode a.unified_link,
+body.dark_mode footer {
+  color: rgb(255, 255, 255) !important;
 }
 
-/* Dark mode end*/
+/* Dark mode end */
 
 a {
   text-decoration: none;
 }
 
-a.unified-link {
+a.unified_link {
   color: rgba(0, 0, 0);
 }
 
@@ -180,22 +183,39 @@ button:hover{
     border-radius: 8px;
 } */
 
-#favorite {
+/*
+  注意区分#favorite和.favorite
+  id #favorite是index_card大图，class .favorite是每个card的小图
+*/
+#favorite,
+.favorite {
   transition: 0.7s;
   border-radius: 50%;
   -webkit-border-radius: 50%;
 }
 
-#index_card:hover #favorite {
-  transform: rotate(360deg);
+.favorite {
+  float: left;
+  height: 72px;
+  margin-top: -15px;
+  margin-left: -15px;
 }
 
+/* 图片旋转效果 */
+#index_card:hover #favorite,
 #index_card:active #favorite {
   transform: rotate(360deg);
 }
 
+.card:hover .favorite,
+.card:active .favorite {
+  transform: rotate(360deg);
+}
+
 #favorite:hover,
-#favorite:active {
+#favorite:active,
+.favorite:hover,
+.favorite:active {
   transform: rotate(360deg);
 }
 
@@ -204,13 +224,15 @@ button:hover{
   height: 80px !important;
 }
 
+.class_title {
+  padding-left: 1%;
+  padding-top: 1%;
+  float: left;
+}
+
 .iconfont {
   color: #000;
   font-size: 25px !important;
-}
-
-a {
-  text-decoration: none;
 }
 
 progress {
@@ -232,7 +254,8 @@ progress {
 
 .project_card {
   overflow: hidden;
-  overflow: scroll;
+  padding: 1%;
+  margin: 5%;
   background: rgba(250, 250, 250, 0.6);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(11px);
@@ -269,6 +292,7 @@ progress {
 .p_all_text {
   /* text-overflow: ellipsis;
     white-space: nowrap; */
+  padding-top: 10px;
   line-height: 20px;
   margin-left: 3%;
   margin-bottom: 3%;
@@ -295,7 +319,7 @@ progress {
   background: rgba(250, 250, 250, 0.8);
 }
 
-.card-img {
+.card_img {
   height: 160px;
   overflow: hidden;
   border-radius: 10px;
@@ -304,7 +328,7 @@ progress {
   background-size: 100% 100%;
 }
 
-.card-u {
+.card_u {
   padding-top: 10px;
   height: 45px;
   position: relative;
@@ -355,7 +379,7 @@ footer {
   z-index: 9999;
 }
 
-.dialog-box {
+.dialog_box {
   position: relative;
   background-color: white;
   padding: 20px;
@@ -363,7 +387,7 @@ footer {
   border-radius: 5px;
 }
 
-.close-button {
+.close_button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -371,13 +395,13 @@ footer {
   cursor: pointer;
 }
 
-.fixed-buttons {
+.fixed_buttons {
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 9999;
 }
-.fixed-buttons button {
+.fixed_buttons button {
   width: 40px;
   height: 40px;
   margin-bottom: 10px;
@@ -386,7 +410,7 @@ footer {
   background-color: rgb(204, 204, 204);
   font-size: 18px;
 }
-.fixed-buttons button:first-child {
+.fixed_buttons button:first-child {
   margin-bottom: 0;
 }
 
@@ -402,7 +426,6 @@ footer {
 @media (max-width: 1000px) {
   #index_card {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4) !important;
-    margin-top: 20% !important;
     margin-left: 5% !important;
     margin-right: 5% !important;
   }
@@ -412,11 +435,6 @@ footer {
   #index_card.hover_effect {
     backdrop-filter: blur(11px) !important;
     box-shadow: 0px 0px 32px 0 rgba(0, 0, 0, 0.4) !important;
-    margin-top: 20% !important;
-  }
-
-  #index_card.small_effect {
-    background: rgba(250, 250, 250, 0.6) !important;
   }
 
   .card {
@@ -431,9 +449,9 @@ footer {
     height: 80px !important;
   }
 
-  .project_card {
+  /* .project_card {
     height: 30%;
-  }
+  } */
 
   .notes_card {
     width: 38vw;
@@ -455,6 +473,20 @@ footer {
 
   footer {
     margin-top: 1% !important;
+  }
+}
+
+/* 屏幕宽度大于800px时，in_line内project_card一行两个 */
+@media (min-width: 800px) {
+  .in_line {
+    display: grid;
+    grid-gap: 1%; /* 在卡片之间提供间距 */
+    align-content: start;
+    grid-template-columns: 1fr 1fr; /* 每行有两个卡片 */
+  }
+  .project_card {
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 }
 

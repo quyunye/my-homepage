@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <div class="change" id="index_card" style="text-align: center;">
+    <div class="change" id="index_card">
         <center>
             <img class="change" id="favorite" style="width:160px;margin-top:-50px;" src="images/favorite.jpg"><br>
             <b id="name" style="font-weight: 300;font-size:200%;">屈耘野 Qu, Yunye</b><br>
@@ -46,6 +46,7 @@
                             introduction(document.getElementById('introduction'), sentence);
                         });
                     </script>
+                </span>
         </center>
         <center>
             <div class="buttons" style="text-align: center;">
@@ -102,17 +103,16 @@
 
 
     <div class="overlay" id="overlay" style="display:none;"
-        onclick="if(event.target === this || event.target.classList.contains('close-button')) { this.style.display = 'none'; }">
-        <div class="dialog-box">
-            <span class="close-button">&times; 关闭</span>
+        onclick="if(event.target === this || event.target.classList.contains('close_button')) { this.style.display = 'none'; }">
+        <div class="dialog_box">
+            <span class="close_button">&times; 关闭</span>
             <img id="dialog-img" style="margin: 0 auto;max-width: 300px;" src="images/wechat.jpg" alt="联系方式">
         </div>
     </div>
 
     <div id="about" class="change card">
-        <a href="#"><img class="change" id="favorite"
-                style="float:left;height:72px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
-        <div style="padding-left:1%;padding-top:1%;float:left;">
+        <a href="#"><img class="change favorite" src="images/favorite.jpg"></a>
+        <div class="class_title">
             <b style="font-size:150%;" onclick="window.location.href='#'">简单介绍<br></b>About<br><br>
         </div>
 
@@ -132,18 +132,17 @@
     </div>
 
     <div id="education" class="change card">
-        <a href="#"><img class="change" id="favorite"
-                style="float:left;height:72px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
-        <div style="padding-left:1%;padding-top:1%;float:left;">
+        <a href="#"><img class="change favorite" src="images/favorite.jpg"></a>
+        <div class="class_title">
             <b style="font-size:150%;" onclick="window.location.href='#'">教育经历<br></b>Education<br><br>
         </div>
 
         <div style="clear:both;">
             <a>
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <div class="project_card">
                     <img class="p_card_p" src="images/imperial.jpg">
                     <div class="p_card_p_2" style="background-image: url(images/imperial.jpg);"></div>
-                    <p class="p_all_text" style="padding-top: 10px;">
+                    <p class="p_all_text">
                         <b class="p_card_t"><img style="height:22px;float:left;"
                                 src="images/imperial-logo.png">帝国理工学院</b>
                         <br>
@@ -158,10 +157,10 @@
             </a>
 
             <a>
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <div class="project_card">
                     <img class="p_card_p" src="images/ouc.jpg">
                     <div class="p_card_p_2" style="background-image: url(images/ouc.jpg);"></div>
-                    <p class="p_all_text" style="padding-top: 10px;">
+                    <p class="p_all_text">
                         <a class="p_card_t"><img style="height:22px;float:left;" src="images/ouc-logo.png">中国海洋大学</a>
                         <br>
                         <a class="p_card_text" style="font-size:17px;">工程学士 计算机科学与技术</a>
@@ -178,18 +177,17 @@
     </div>
 
     <div id="tech" class="change card">
-        <a href="#"><img class="change" id="favorite"
-                style="float:left;height:72px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
-        <div style="padding-left:1%;padding-top:1%;float:left;">
+        <a href="#"><img class="change favorite" src="images/favorite.jpg"></a>
+        <div class="class_title">
             <b style="font-size:150%;" onclick="window.location.href='#'">知识与技能<br></b>Tech & Skill<br><br>
         </div>
 
         <div style="clear:both;">
             <a>
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <div class="project_card">
 
                     <left>
-                        <p class="p_all_text" style="padding-top: 10px;">
+                        <p class="p_all_text">
                             <left><b class="p_card_t">CS & 前后端开发</b><br>
                             </left>
 
@@ -221,9 +219,9 @@
             </a>
 
             <a>
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <div class="project_card">
                     <left>
-                        <p class="p_all_text" style="padding-top: 10px;">
+                        <p class="p_all_text">
                             <left><b class="p_card_t">人工智能 & 数据科学</b><br>
                             </left>
                             <b class="p_card_tag blue1">
@@ -250,9 +248,9 @@
             </a>
 
             <a>
-                <div style="overflow:hidden;padding:1%;margin:5%;" class="project_card">
+                <div class="project_card">
                     <left>
-                        <p class="p_all_text" style="padding-top: 10px;">
+                        <p class="p_all_text">
                             <left><b class="p_card_t">信息安全 & 网络攻防</b><br>
                             </left>
                             <b class="p_card_tag blue1">
@@ -280,8 +278,8 @@
             <div style="text-align: center;">
                 <div class="notes_card">
                     <a>
-                        <div class="card-img" style="background-image: url(images/paint.jpg);"></div>
-                        <div class="card-u">
+                        <div class="card_img" style="background-image: url(images/paint.jpg);"></div>
+                        <div class="card_u">
                             <b class="p_card_tag blue1">
                                 &nbsp;西画&nbsp;</b>
                             <b class="p_card_tag blue1">
@@ -293,8 +291,8 @@
                 </div>
                 <div class="notes_card">
                     <a>
-                        <div class="card-img" style="background-image: url(images/psy.jpg);"></div>
-                        <div class="card-u">
+                        <div class="card_img" style="background-image: url(images/psy.jpg);"></div>
+                        <div class="card_u">
                             <b class="p_card_tag blue1">
                                 &nbsp;心理学&nbsp;</b>
                             <b class="p_card_tag blue1">
@@ -309,9 +307,8 @@
     </div>
 
     <div id="more" class="change card">
-        <a href="#"><img class="change" id="favorite"
-                style="float:left;height:72px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
-        <div style="padding-left:1%;padding-top:1%;float:left;">
+        <a href="#"><img class="change favorite" src="images/favorite.jpg"></a>
+        <div class="class_title">
             <b style="font-size:150%;" onclick="window.location.href='#'">更多信息<br></b>More<br><br>
         </div>
 
@@ -319,54 +316,53 @@
             <b style="font-size:15px;font-weight: 400;">
                 <p><a href="projects.html#projects" target="_blank"><i style="color:#a7431e;"
                             class="iconfont icon-ziyuan"></i></a><a href="projects.html#projects" target="_blank"
-                        class="unified-link">点击这里 查看我的项目与经验</a>
+                        class="unified_link">点击这里 查看我的项目与经验</a>
                 </p>
                 <p>
                     <a href="life.html#life" target="_blank"><i style="color:#b37004;"
                             class="iconfont icon-xingqiu"></i></a><a href="life.html#life" target="_blank"
-                        class="unified-link">点击这里 查看我的生活</a>
+                        class="unified_link">点击这里 查看我的生活</a>
                 </p>
             </b>
         </div>
     </div>
 
     <div id="contact" class="change card">
-        <a href="#"><img class="change" id="favorite"
-                style="float:left;height:72px;margin-top:-15px;margin-left:-15px;" src="images/favorite.jpg"></a>
-        <div style="padding-left:1%;padding-top:1%;float:left;">
+        <a href="#"><img class="change favorite" src="images/favorite.jpg"></a>
+        <div class="class_title">
             <b style="font-size:150%;" onclick="window.location.href='#'">链接 & 联系<br></b>Links & Contact<br><br>
         </div>
 
         <div style="clear:both;padding-left:3%;padding-right:3%;padding-bottom:3%;">
             <b style="font-size:15px;font-weight: 400;">
-                <p><a href="Mailto:i@quyunye.com" class="unified-link"><i class="iconfont icon-youjian"></i> 邮件:
-                        i@quyunye.com</a> 和<a href="Mailto:Wo@Shi.La" class="unified-link"> Wo@Shi.La</a></p>
-                <p><a href="https://www.svip.tech/" target="_blank" class="unified-link"><i
+                <p><a href="Mailto:i@quyunye.com" class="unified_link"><i class="iconfont icon-youjian"></i> 邮件:
+                        i@quyunye.com</a> 和<a href="Mailto:Wo@Shi.La" class="unified_link"> Wo@Shi.La</a></p>
+                <p><a href="https://www.svip.tech/" target="_blank" class="unified_link"><i
                             class="iconfont icon-xiangji"></i> 博客: www.svip.tech</a></p>
                 <p>
-                    <a href="#" class="unified-link"
+                    <a href="#" class="unified_link"
                         onclick="document.getElementById('overlay').style.display = 'flex';document.getElementById('dialog-img').src = 'images/wechat.jpg';return false;"
                         target="_self"><i class="iconfont icon-weixin"></i> 微信: 点击显示</a>&nbsp;&nbsp;
-                    <a href="#" class="unified-link"
+                    <a href="#" class="unified_link"
                         onclick="document.getElementById('overlay').style.display = 'flex';document.getElementById('dialog-img').src = 'images/qq.jpg';return false;"
                         target="_self"><i class="iconfont icon-qq"></i> QQ: 点击显示</a>
                 </p>
                 <p>
-                    <a href="https://twitter.com/VerrillTT" target="_blank" class="unified-link"><i
+                    <a href="https://twitter.com/VerrillTT" target="_blank" class="unified_link"><i
                             class="iconfont icon-tuite"></i> Twitter: VerrillTT</a>&nbsp;&nbsp;
-                    <a href="https://t.me/Verrill" target="_blank" class="unified-link"><i
+                    <a href="https://t.me/Verrill" target="_blank" class="unified_link"><i
                             class="iconfont icon-telegram"></i> Telegram: Verrill</a>
                 </p>
-                <p><a href="https://github.com/quyunye" target="_blank" class="unified-link"><i
+                <p><a href="https://github.com/quyunye" target="_blank" class="unified_link"><i
                             class="iconfont icon-github"></i> GitHub: QuYunye</a></p>
                 <p><i class="iconfont icon-biji"></i> 旧版主页: <a href="https://quyunye.com/2016" target="_blank"
-                        class="unified-link">2016</a>&nbsp;<a href="https://quyunye.com/2019.html" target="_blank"
-                        class="unified-link">2019</a></p>
+                        class="unified_link">2016</a>&nbsp;<a href="https://quyunye.com/2019.html" target="_blank"
+                        class="unified_link">2019</a></p>
             </b>
         </div>
     </div>
 
-    <div class="fixed-buttons">
+    <div class="fixed_buttons">
         <!-- Dark mode toggle button -->
         <button onclick="toggleDarkMode()"><i class="iconfont icon-yewan"></i></button>
         <!-- Scroll to top button -->
@@ -378,8 +374,8 @@
     <!-----------  footer----------->
     <footer id="footer">
         <p style="text-align: center;">
-            <a class="unified-link" href="http://wo.shi.la" target="_blank">Wo.Shi.La</a> - 我是啦<br>
-            <a class="unified-link" href="https://quyunye.com" target="_blank">QuYunye.com</a> - 屈耘野 © 2013 - 2023
+            <a class="unified_link" href="http://wo.shi.la" target="_blank">Wo.Shi.La</a> - 我是啦<br>
+            <a class="unified_link" href="https://quyunye.com" target="_blank">QuYunye.com</a> - 屈耘野 © 2013 - 2023
         </p>
         <br>
         <center>
