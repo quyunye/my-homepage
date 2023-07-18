@@ -83,7 +83,11 @@ body {
 /* Dark mode start */
 
 body.dark_mode {
-  background: linear-gradient(to left, rgb(6, 6, 6), rgb(50, 50, 50)) !important;
+  background: linear-gradient(
+    to left,
+    rgb(6, 6, 6),
+    rgb(50, 50, 50)
+  ) !important;
   color: rgb(255, 255, 255) !important;
 }
 
@@ -248,6 +252,7 @@ progress {
 }
 
 .p_card_content {
+  clear: both;
   margin-top: 1%;
   margin-left: 3%;
 }
