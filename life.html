@@ -36,7 +36,8 @@
 <body>
     <div class="change" id="index_card">
         <center>
-            <img class="change" id="favorite" style="width:160px;margin-top:-50px;" src="https://ss.4r7.com/card/images/favorite.jpg"><br>
+            <img class="change" id="favorite" style="width:160px;margin-top:-50px;"
+                src="https://ss.4r7.com/card/images/favorite.jpg"><br>
             <b id="name" style="font-weight: 300;font-size:200%;">屈耘野 Qu, Yunye</b><br>
             <b><span style="font-weight: 300;" class="text-muted text-xs block">
                     <div id="introduction"></div>
@@ -113,7 +114,8 @@
         onclick="if(event.target === this || event.target.classList.contains('close_button')) { this.style.display = 'none'; }">
         <div class="dialog_box">
             <span class="close_button">&times; 关闭</span>
-            <img id="dialog-img" style="margin: 0 auto;max-width: 300px;" src="https://ss.4r7.com/card/images/wechat.jpg" alt="联系方式">
+            <img id="dialog-img" style="margin: 0 auto;max-width: 300px;"
+                src="https://ss.4r7.com/card/images/wechat.jpg" alt="联系方式">
         </div>
     </div>
 
@@ -159,7 +161,8 @@
             <a>
                 <div class="project_card">
                     <img class="p_card_p" src="https://ss.4r7.com/card/images/gta5.jpg">
-                    <div class="p_card_p_2" style="background-image: url(https://ss.4r7.com/card/images/gta5.jpg);"></div>
+                    <div class="p_card_p_2" style="background-image: url(https://ss.4r7.com/card/images/gta5.jpg);">
+                    </div>
                     <p class="p_all_text">
                         <a class="p_card_t">GTA5</a>
                         <br>
@@ -180,11 +183,14 @@
 
     <div class="fixed_buttons">
         <!-- Dark mode toggle button -->
-        <button onclick="toggleDarkMode()"><i class="iconfont icon-yewan"></i></button>
+        <button id="darkMode" onclick="toggleDarkMode()" onmouseover="re_fixed_buttons('darkMode');"
+            onmouseout="re_fixed_buttons('darkMode');"><i class="iconfont icon-yewan"></i></button>
         <!-- Scroll to top button -->
-        <button onclick="scrollToTop()"><i class="iconfont icon-dingbu"></i></button>
+        <button id="toTop" onclick="scrollToTop()" onmouseover="re_fixed_buttons('toTop');"
+            onmouseout="re_fixed_buttons('toTop');"><i class="iconfont icon-dingbu"></i></button>
         <!-- Fullscreen toggle button -->
-        <!-- <button onclick="toggleFullscreen()"><i class="iconfont icon-fangda"></i></button> -->
+        <!-- <button id="fullscreen" onclick="toggleFullscreen()" onmouseover="re_fixed_buttons('fullscreen');"
+            onmouseout="re_fixed_buttons('fullscreen');"><i class="iconfont icon-fangda"></i></button> -->
     </div>
 
     <!-----------  footer----------->

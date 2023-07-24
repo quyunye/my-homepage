@@ -61,6 +61,15 @@ function updateFullscreenButton() {
         fullscreenIcon.className = 'iconfont icon-fangda';
     }
 }
+//button鼠标悬浮反色
+function re_fixed_buttons(in_fixed_button) {
+    var fixed_button = document.getElementById(in_fixed_button);
+    if (fixed_button.style.filter == 'invert(100%)') {
+        fixed_button.style.filter = '';
+    } else {
+        fixed_button.style.filter = 'invert(100%)';
+    }
+}
 // ----------- button 结束 -----------
 
 
