@@ -398,11 +398,14 @@
 
     <div class="fixed_buttons">
         <!-- Dark mode toggle button -->
-        <button onclick="toggleDarkMode()"><i class="iconfont icon-yewan"></i></button>
+        <button id="darkMode" onclick="toggleDarkMode()" onmouseover="re_fixed_buttons('darkMode');"
+            onmouseout="re_fixed_buttons('darkMode');"><i class="iconfont icon-yewan"></i></button>
         <!-- Scroll to top button -->
-        <button onclick="scrollToTop()"><i class="iconfont icon-dingbu"></i></button>
+        <button id="toTop" onclick="scrollToTop()" onmouseover="re_fixed_buttons('toTop');"
+            onmouseout="re_fixed_buttons('toTop');"><i class="iconfont icon-dingbu"></i></button>
         <!-- Fullscreen toggle button -->
-        <!-- <button onclick="toggleFullscreen()"><i class="iconfont icon-fangda"></i></button> -->
+        <!-- <button id="fullscreen" onclick="toggleFullscreen()" onmouseover="re_fixed_buttons('fullscreen');"
+            onmouseout="re_fixed_buttons('fullscreen');"><i class="iconfont icon-fangda"></i></button> -->
     </div>
 
     <!-----------  footer----------->

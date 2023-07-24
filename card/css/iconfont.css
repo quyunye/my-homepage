@@ -1,9 +1,9 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4116886 */
-  src: url('https://ss.4r7.com/card/css/iconfont.woff2?t=1689219743561') format('woff2'),
-       url('https://ss.4r7.com/card/css/iconfont.woff?t=1689219743561') format('woff'),
-       url('https://ss.4r7.com/card/css/iconfont.ttf?t=1689219743561') format('truetype'),
-       url('https://ss.4r7.com/card/css/iconfont.svg?t=1689219743561#iconfont') format('svg');
+  src: url('https://ss.4r7.com/card/css/iconfont.woff2?t=1690164942754') format('woff2'),
+       url('https://ss.4r7.com/card/css/iconfont.woff?t=1690164942754') format('woff'),
+       url('https://ss.4r7.com/card/css/iconfont.ttf?t=1690164942754') format('truetype'),
+       url('https://ss.4r7.com/card/css/iconfont.svg?t=1690164942754#iconfont') format('svg');
 }
 
 .iconfont {
@@ -14,12 +14,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-telegram:before {
-  content: "\e731";
+.icon-taiyang:before {
+  content: "\e61b";
 }
 
-.icon-taiyang:before {
-  content: "\e6e8";
+.icon-dingbu:before {
+  content: "\e666";
+}
+
+.icon-telegram:before {
+  content: "\e731";
 }
 
 .icon-yewan:before {
@@ -168,9 +172,5 @@
 
 .icon-yanfa:before {
   content: "\e7aa";
-}
-
-.icon-dingbu:before {
-  content: "\e600";
 }
 
