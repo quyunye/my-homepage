@@ -8,7 +8,7 @@
 
 
 
-#### 大体框架基于[TuHome](https://github.com/ye-tutu/TuHome)魔改，部分内容如下
+#### 大体框架基于[TuHome](https://github.com/ye-tutu/TuHome)魔改，部分优化内容如下
 
 1. 增加深色模式、全屏模式、平滑滚动功能
 2. 新增了页面内部消息窗口组件，新增了若干页面，新增旅行地图等组件和css效果
