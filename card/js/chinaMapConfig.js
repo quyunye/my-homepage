@@ -54,7 +54,7 @@ var chinaMapConfig = {
 		jiangxi: {id:13,name:'江西',x:22,y:24,color:"A8C9DF",direction:"left"},
 		fujian: {id:14,name:'福建',x:22,y:28,color:"A8C9DF",direction:"left"},
 		hunan: {id:15,name:'湖南',x:30,y:30,color:"A8C9DF",direction:"right"},
-		guizhou: {id:16,name:'贵州',x:36,y:30,color:"c0f0ff",direction:"right"},
+		guizhou: {id:16,name:'贵州',x:36,y:30,color:"A8C9DF",direction:"right"},
 		sichuan: {id:17,name:'四川',x:58,y:42,color:"A8C9DF",direction:"right"},
 		yunnan: {id:18,name:'云南',x:50,y:62,color:"c0f0ff",direction:"top"},
 		qinghai: {id:19,name:'青海',x:66,y:40,color:"c0f0ff",direction:"left"},

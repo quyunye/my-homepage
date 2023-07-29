@@ -120,6 +120,11 @@ body.dark_mode footer {
   color: rgb(255, 255, 255) !important;
 }
 
+body.dark_mode .dialog_box {
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(0, 0, 0) !important;
+}
+
 /* Dark mode end */
 
 a {
@@ -386,7 +391,7 @@ footer {
 
 .dialog_box {
   position: relative;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   text-align: center;
   border-radius: 5px;
